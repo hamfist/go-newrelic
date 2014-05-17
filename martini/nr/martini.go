@@ -1,4 +1,4 @@
-package martini
+package nr
 
 import (
 	"log"
@@ -26,5 +26,6 @@ func Configure(m *martini.ClassicMartini) error {
 // NewRelicMiddleware builds a martini handler for use in middleware, eh
 func NewRelicMiddleware(c *config.Config) martini.Handler {
 	return func(res http.ResponseWriter, req *http.Request, c martini.Context, log *log.Logger, ctl control.Controller) {
+		log.Printf("ctl=%v\n", ctl)
 	}
 }

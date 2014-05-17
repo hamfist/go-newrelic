@@ -1,0 +1,26 @@
+{
+	"ImportPath": "github.com/meatballhat/go-newrelic",
+	"GoVersion": "go1.2",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/Sirupsen/logrus",
+			"Rev": "13600d23259ccda5a64370722cc80c8928e565cb"
+		},
+		{
+			"ImportPath": "github.com/codegangsta/inject",
+			"Rev": "1817ef28a0e76985d513785871920d9f0c3df187"
+		},
+		{
+			"ImportPath": "github.com/go-martini/martini",
+			"Comment": "v0.1-153-gbaa4221",
+			"Rev": "baa42219288cdd775874794381aa987144012263"
+		},
+		{
+			"ImportPath": "github.com/kelseyhightower/envconfig",
+			"Rev": "6ca61633287c0238628ee9dd44d14445ee4be426"
+		}
+	]
+}
