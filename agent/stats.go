@@ -29,13 +29,13 @@ func NewStatsFromMetric(m *metric.Metric) (*Stats, error) {
 func (st *Stats) Record(value interface{}, aux interface{}) error {
 	switch value.(type) {
 	case float64:
-		st.recordDataPoint(value, aux)
+		st.recordDataPoint(value.(float64), aux.(float64))
 	case string:
 		if value == "apdex_s" || value == "apdex_t" || value == "apdex_f" {
-			st.recordApdex(value, aux)
+			st.recordApdex(value.(string), aux.(float64))
 		}
 	case *Stats:
-		st.merge(value)
+		st.merge(value.(*Stats))
 	default:
 		return errInvalidValue
 	}
